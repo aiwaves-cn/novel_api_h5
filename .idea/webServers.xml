@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="1e6f06fe-444f-4eab-a071-3f63216e031f" name="novel_api">
+        <fileTransfer accessType="SFTP" host="192.168.12.52" port="22" sshConfigId="60a08e61-e468-4412-9659-603ca90076eb" sshConfig="aiwaves@192.168.12.52:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
