@@ -15,8 +15,9 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/novel_api" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/novel_api/apps" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Remote Python 3.10.11 (sftp://aiwaves@192.168.12.52:22/home/aiwaves/anaconda3/envs/comic_env/bin/python3.10)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.10 (venv)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">

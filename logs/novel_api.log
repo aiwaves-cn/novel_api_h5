@@ -6259,3 +6259,164 @@ INFO 2023-06-19 07:58:41,744 basehttp 161 "POST /api/v1/chatbot/get_summary/ HTT
 INFO 2023-06-19 07:58:59,673 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 200 563798
 INFO 2023-06-19 07:59:07,454 basehttp 161 "POST /api/v1/chatbot/get_question_and_option/ HTTP/1.1" 200 25138
 INFO 2023-06-19 08:05:23,223 basehttp 161 "GET /api/v1/novel/ HTTP/1.1" 200 1630
+INFO 2023-06-19 16:30:59,287 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 16:31:19,521 basehttp 161 "GET /api/v1/novel/ HTTP/1.1" 200 1630
+INFO 2023-06-19 16:32:57,337 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 200 675608
+INFO 2023-06-19 16:33:58,106 autoreload 250 E:\workspace2\novel_api\chatbot\views.py changed, reloading.
+INFO 2023-06-19 16:33:59,467 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 16:34:06,193 autoreload 250 E:\workspace2\novel_api\chatbot\views.py changed, reloading.
+INFO 2023-06-19 16:34:07,457 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 16:40:46,981 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 16:40:49,552 autoreload 250 E:\workspace2\novel_api\chatbot\views.py changed, reloading.
+INFO 2023-06-19 16:40:50,968 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 16:41:27,318 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 200 526118
+INFO 2023-06-19 16:54:32,652 autoreload 250 E:\workspace2\novel_api\chatbot\models.py changed, reloading.
+INFO 2023-06-19 16:54:34,048 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 16:57:28,569 autoreload 250 E:\workspace2\novel_api\chatbot\models.py changed, reloading.
+INFO 2023-06-19 16:57:29,913 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 16:58:52,794 autoreload 250 E:\workspace2\novel_api\novel\views.py changed, reloading.
+INFO 2023-06-19 16:58:54,084 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 16:59:09,536 basehttp 161 "GET /api/v1/novel/ HTTP/1.1" 200 1630
+INFO 2023-06-19 17:00:54,188 autoreload 250 E:\workspace2\novel_api\novel\views.py changed, reloading.
+INFO 2023-06-19 17:00:55,617 autoreload 636 Watching for file changes with StatReloader
+ERROR 2023-06-19 17:01:51,538 common_exceptions 16 用户：【匿名用户】，使用：【POST】 请求，请求：【/api/v1/novel/4/】 地址，视图函数是：【<novel.views.NovelApiView object at 0x000001D2FFC53B80>】，报错了，错误是：【Method "POST" not allowed.】
+INFO 2023-06-19 17:01:51,539 basehttp 161 "POST /api/v1/novel/4/ HTTP/1.1" 200 49
+ERROR 2023-06-19 17:01:56,704 common_exceptions 16 用户：【匿名用户】，使用：【POST】 请求，请求：【/api/v1/novel/4/】 地址，视图函数是：【<novel.views.NovelApiView object at 0x000001D2FFA67DC0>】，报错了，错误是：【Method "POST" not allowed.】
+INFO 2023-06-19 17:01:56,705 basehttp 161 "POST /api/v1/novel/4/ HTTP/1.1" 200 49
+ERROR 2023-06-19 17:01:57,840 common_exceptions 16 用户：【匿名用户】，使用：【POST】 请求，请求：【/api/v1/novel/4/】 地址，视图函数是：【<novel.views.NovelApiView object at 0x000001D2FFA67910>】，报错了，错误是：【Method "POST" not allowed.】
+INFO 2023-06-19 17:01:57,841 basehttp 161 "POST /api/v1/novel/4/ HTTP/1.1" 200 49
+INFO 2023-06-19 17:02:02,086 basehttp 161 "POST /api/v1/novel/ HTTP/1.1" 200 28
+INFO 2023-06-19 17:02:41,449 autoreload 250 E:\workspace2\novel_api\novel\views.py changed, reloading.
+INFO 2023-06-19 17:02:42,650 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:02:49,322 autoreload 250 E:\workspace2\novel_api\novel\views.py changed, reloading.
+INFO 2023-06-19 17:02:50,623 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:02:59,312 autoreload 250 E:\workspace2\novel_api\novel\views.py changed, reloading.
+INFO 2023-06-19 17:03:00,651 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:03:06,314 autoreload 250 E:\workspace2\novel_api\novel\views.py changed, reloading.
+INFO 2023-06-19 17:03:07,576 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:03:13,206 autoreload 250 E:\workspace2\novel_api\novel\views.py changed, reloading.
+INFO 2023-06-19 17:03:14,495 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:03:47,878 autoreload 250 E:\workspace2\novel_api\novel\views.py changed, reloading.
+INFO 2023-06-19 17:03:49,137 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:04:14,363 autoreload 250 E:\workspace2\novel_api\novel\views.py changed, reloading.
+INFO 2023-06-19 17:04:14,532 basehttp 161 "POST /api/v1/novel/ HTTP/1.1" 200 28
+INFO 2023-06-19 17:04:15,654 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:04:18,287 basehttp 161 "POST /api/v1/novel/ HTTP/1.1" 200 28
+INFO 2023-06-19 17:05:06,914 autoreload 250 E:\workspace2\novel_api\novel_api\settings.py changed, reloading.
+INFO 2023-06-19 17:06:29,821 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:06:41,923 basehttp 161 "POST /api/v1/novel/ HTTP/1.1" 200 28
+INFO 2023-06-19 17:11:15,521 autoreload 250 E:\workspace2\novel_api\chatbot\models.py changed, reloading.
+INFO 2023-06-19 17:11:16,994 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:17:35,162 autoreload 250 E:\workspace2\novel_api\novel\views.py changed, reloading.
+INFO 2023-06-19 17:17:36,562 autoreload 636 Watching for file changes with StatReloader
+ERROR 2023-06-19 17:17:37,074 common_exceptions 16 用户：【匿名用户】，使用：【POST】 请求，请求：【/api/v1/novel/】 地址，视图函数是：【<novel.views.NovelApiView object at 0x0000013DEB5AF370>】，报错了，错误是：【Field name `novel_visit ` is not valid for model `Novel`.】
+INFO 2023-06-19 17:17:37,075 basehttp 161 "POST /api/v1/novel/ HTTP/1.1" 200 78
+INFO 2023-06-19 17:18:52,554 autoreload 250 E:\workspace2\novel_api\novel\serializers.py changed, reloading.
+INFO 2023-06-19 17:18:53,716 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:18:57,213 basehttp 161 "POST /api/v1/novel/ HTTP/1.1" 200 572
+INFO 2023-06-19 17:19:12,702 basehttp 161 "POST /api/v1/novel/ HTTP/1.1" 200 572
+INFO 2023-06-19 17:20:20,551 basehttp 161 "POST /api/v1/novel/ HTTP/1.1" 200 563
+INFO 2023-06-19 17:21:13,851 basehttp 161 "POST /api/v1/novel/ HTTP/1.1" 200 563
+INFO 2023-06-19 17:22:02,409 basehttp 161 "GET /api/v1/novel/ HTTP/1.1" 200 1630
+INFO 2023-06-19 17:23:20,550 autoreload 250 E:\workspace2\novel_api\novel\views.py changed, reloading.
+INFO 2023-06-19 17:23:21,954 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:23:23,902 basehttp 161 "GET /api/v1/novel/ HTTP/1.1" 200 38
+INFO 2023-06-19 17:23:25,874 basehttp 161 "GET /api/v1/novel/ HTTP/1.1" 200 38
+INFO 2023-06-19 17:23:44,285 autoreload 250 E:\workspace2\novel_api\novel\views.py changed, reloading.
+INFO 2023-06-19 17:23:44,366 basehttp 161 "GET /api/v1/novel/ HTTP/1.1" 200 38
+INFO 2023-06-19 17:23:45,731 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:23:46,765 basehttp 161 "GET /api/v1/novel/ HTTP/1.1" 200 1630
+INFO 2023-06-19 17:24:08,950 autoreload 250 E:\workspace2\novel_api\novel\views.py changed, reloading.
+INFO 2023-06-19 17:24:10,149 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:31:44,711 autoreload 250 E:\workspace2\novel_api\novel\views.py changed, reloading.
+INFO 2023-06-19 17:31:45,970 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:32:29,085 autoreload 250 E:\workspace2\novel_api\novel\views.py changed, reloading.
+INFO 2023-06-19 17:32:30,457 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:32:50,535 autoreload 250 E:\workspace2\novel_api\novel_api\settings.py changed, reloading.
+INFO 2023-06-19 17:32:51,909 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:35:11,520 autoreload 250 E:\workspace2\novel_api\novel_api\settings.py changed, reloading.
+INFO 2023-06-19 17:35:12,681 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:35:35,828 autoreload 250 E:\workspace2\novel_api\novel_api\settings.py changed, reloading.
+INFO 2023-06-19 17:35:37,157 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:36:00,378 autoreload 250 E:\workspace2\novel_api\novel_api\settings.py changed, reloading.
+INFO 2023-06-19 17:36:01,606 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:36:17,559 autoreload 250 E:\workspace2\novel_api\novel_api\settings.py changed, reloading.
+INFO 2023-06-19 17:36:18,733 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:36:30,579 autoreload 250 E:\workspace2\novel_api\novel_api\settings.py changed, reloading.
+INFO 2023-06-19 17:36:31,946 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:37:32,188 autoreload 250 E:\workspace2\novel_api\novel\views.py changed, reloading.
+INFO 2023-06-19 17:37:33,527 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:38:38,844 autoreload 250 E:\workspace2\novel_api\novel\views.py changed, reloading.
+INFO 2023-06-19 17:38:39,952 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:40:31,712 autoreload 250 E:\workspace2\novel_api\novel\views.py changed, reloading.
+INFO 2023-06-19 17:40:33,071 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:40:33,567 basehttp 161 "GET /api/v1/novel/ HTTP/1.1" 200 1630
+INFO 2023-06-19 17:40:38,806 basehttp 161 "GET /api/v1/novel/ HTTP/1.1" 200 1630
+INFO 2023-06-19 17:40:40,471 basehttp 161 "GET /api/v1/novel/ HTTP/1.1" 200 1630
+INFO 2023-06-19 17:41:30,494 autoreload 250 E:\workspace2\novel_api\novel\models.py changed, reloading.
+INFO 2023-06-19 17:41:31,726 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:41:47,319 autoreload 250 E:\workspace2\novel_api\novel\models.py changed, reloading.
+INFO 2023-06-19 17:41:48,720 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:41:49,341 basehttp 161 "GET /api/v1/novel/1/ HTTP/1.1" 200 3717
+INFO 2023-06-19 17:44:31,622 autoreload 250 E:\workspace2\novel_api\novel\views.py changed, reloading.
+INFO 2023-06-19 17:44:32,903 autoreload 636 Watching for file changes with StatReloader
+ERROR 2023-06-19 17:44:41,716 common_exceptions 16 用户：【匿名用户】，使用：【POST】 请求，请求：【/api/v1/novel/create_novel_desc/】 地址，视图函数是：【<novel.views.NovelApiView object at 0x0000016D0C5BBF40>】，报错了，错误是：【Method "POST" not allowed.】
+INFO 2023-06-19 17:44:41,718 basehttp 161 "POST /api/v1/novel/create_novel_desc/ HTTP/1.1" 200 49
+INFO 2023-06-19 17:45:14,880 autoreload 250 E:\workspace2\novel_api\novel\views.py changed, reloading.
+INFO 2023-06-19 17:45:16,275 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:46:51,604 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:46:53,370 basehttp 161 "POST /api/v1/novel/create_novel_desc/ HTTP/1.1" 200 28
+INFO 2023-06-19 17:46:55,455 basehttp 161 "POST /api/v1/novel/create_novel_desc/ HTTP/1.1" 200 28
+INFO 2023-06-19 17:48:14,667 autoreload 250 E:\workspace2\novel_api\novel\views.py changed, reloading.
+INFO 2023-06-19 17:48:16,191 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:48:17,019 basehttp 161 "POST /api/v1/novel/create_novel_desc/ HTTP/1.1" 200 28
+INFO 2023-06-19 17:49:35,962 autoreload 250 E:\workspace2\novel_api\novel\models.py changed, reloading.
+INFO 2023-06-19 17:49:37,260 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:49:54,259 autoreload 250 E:\workspace2\novel_api\novel\models.py changed, reloading.
+INFO 2023-06-19 17:49:55,444 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:50:18,578 autoreload 250 E:\workspace2\novel_api\novel\models.py changed, reloading.
+INFO 2023-06-19 17:50:19,835 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:50:29,599 autoreload 250 E:\workspace2\novel_api\novel\models.py changed, reloading.
+INFO 2023-06-19 17:50:30,942 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 17:56:02,413 autoreload 250 E:\workspace2\novel_api\novel\models.py changed, reloading.
+INFO 2023-06-19 17:56:03,777 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 18:07:56,879 basehttp 161 "POST /api/v1/novel/create_novel_desc/ HTTP/1.1" 200 28
+INFO 2023-06-19 18:14:04,251 autoreload 250 E:\workspace2\novel_api\novel\models.py changed, reloading.
+INFO 2023-06-19 18:14:05,547 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 18:14:14,296 autoreload 250 E:\workspace2\novel_api\novel\views.py changed, reloading.
+INFO 2023-06-19 18:14:15,544 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 18:14:18,928 basehttp 161 "POST /api/v1/novel/create_novel_desc/ HTTP/1.1" 200 3717
+INFO 2023-06-19 18:14:24,878 basehttp 161 "GET /api/v1/novel/1/ HTTP/1.1" 200 3717
+INFO 2023-06-19 18:14:56,194 basehttp 161 "GET /api/v1/novel/2/ HTTP/1.1" 200 7304
+INFO 2023-06-19 18:15:29,447 basehttp 161 "POST /api/v1/novel/create_novel_desc/ HTTP/1.1" 200 7304
+INFO 2023-06-19 18:15:39,035 basehttp 161 "GET /api/v1/novel/3/ HTTP/1.1" 200 4585
+INFO 2023-06-19 18:16:10,051 basehttp 161 "POST /api/v1/novel/create_novel_desc/ HTTP/1.1" 200 4585
+INFO 2023-06-19 18:17:07,392 autoreload 250 E:\workspace2\novel_api\novel\views.py changed, reloading.
+INFO 2023-06-19 18:17:08,669 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 18:19:42,289 autoreload 250 E:\workspace2\novel_api\novel\views.py changed, reloading.
+INFO 2023-06-19 18:19:43,716 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 18:21:11,821 autoreload 250 E:\workspace2\novel_api\novel\views.py changed, reloading.
+INFO 2023-06-19 18:21:13,162 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 18:21:18,565 basehttp 161 "GET /api/v1/novel/3/ HTTP/1.1" 200 4585
+INFO 2023-06-19 18:21:23,486 basehttp 161 "GET /api/v1/novel/2/ HTTP/1.1" 200 7304
+INFO 2023-06-19 18:21:33,845 basehttp 161 "GET /api/v1/novel/1/ HTTP/1.1" 200 3717
+INFO 2023-06-19 18:21:38,984 basehttp 161 "GET /api/v1/novel/1/ HTTP/1.1" 200 3717
+INFO 2023-06-19 18:21:42,575 basehttp 161 "GET /api/v1/novel/77/ HTTP/1.1" 200 37
+INFO 2023-06-19 18:21:46,368 basehttp 161 "GET /api/v1/novel/2/ HTTP/1.1" 200 7304
+INFO 2023-06-19 18:21:48,398 basehttp 161 "GET /api/v1/novel/3/ HTTP/1.1" 200 4585
+INFO 2023-06-19 18:22:21,930 autoreload 250 E:\workspace2\novel_api\novel\views.py changed, reloading.
+INFO 2023-06-19 18:22:23,179 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 18:22:47,611 basehttp 161 "GET /api/v1/novel/ HTTP/1.1" 200 1630
+INFO 2023-06-19 18:22:49,508 basehttp 161 "GET /api/v1/novel/3/ HTTP/1.1" 200 4585
+INFO 2023-06-19 18:25:22,686 autoreload 250 E:\workspace2\novel_api\novel_api\urls.py changed, reloading.
+INFO 2023-06-19 18:25:23,868 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 18:35:05,999 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 18:36:10,732 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 18:41:37,354 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 18:45:34,946 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 18:46:50,089 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 18:47:40,095 autoreload 250 E:\workspace2\novel_api\novel_api\apps\chatbot\views.py changed, reloading.
+INFO 2023-06-19 18:47:41,460 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 18:49:42,637 autoreload 250 E:\workspace2\novel_api\novel_api\apps\chatbot\views.py changed, reloading.
+INFO 2023-06-19 18:49:43,883 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 18:54:49,730 basehttp 161 "GET /api/v1/novel/ HTTP/1.1" 200 1630

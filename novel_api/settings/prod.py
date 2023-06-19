@@ -16,7 +16,7 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 sys.path.append(str(BASE_DIR))  # 导入小项目路径
-sys.path.append(os.path.join(BASE_DIR, 'apps'))  # 导入app路径
+sys.path.append(os.path.join(BASE_DIR, '../apps'))  # 导入app路径
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -91,7 +91,7 @@ DATABASES = {
 # mongodb配置
 from mongoengine import connect
 from urllib.parse import quote_plus
-connect('dev_test', host="mongodb://%s:%s@%s" % (quote_plus("aiwaves"), quote_plus("bxzn2023"), "47.96.122.196"))
+connect('novel_api_h5', host="mongodb://%s:%s@%s" % (quote_plus("aiwaves"), quote_plus("bxzn2023"), "47.96.122.196"))
 
 
 # Password validation
@@ -132,12 +132,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
-from mongoengine import connect
-from urllib.parse import quote_plus
-
-connect('dev_test', host="mongodb://%s:%s@%s" % (quote_plus("aiwaves"), quote_plus("bxzn2023"), "47.96.122.196"))
 
 
 
