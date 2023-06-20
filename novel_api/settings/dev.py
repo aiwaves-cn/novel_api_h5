@@ -13,14 +13,10 @@ import os
 import sys
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 sys.path.append(str(BASE_DIR))  # 导入小项目路径
 sys.path.append(os.path.join(BASE_DIR, '../apps'))  # 导入app路径
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-fw()pe=&#w&_p_uf*+27pg9ma4-oazvg1*^s@=az4#h(6hatb*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -76,9 +72,6 @@ WSGI_APPLICATION = 'novel_api.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# 数据库相关配置
-# name = os.environ.get('LUFFY_NAME', 'luffy')
-# password = os.environ.get('LUFFY_PASSWORD', 'Luffy123?')
 
 DATABASES = {
     'default': {
@@ -89,14 +82,14 @@ DATABASES = {
 }
 
 # mongodb配置
-# from mongoengine import connect
-# from urllib.parse import quote_plus
-#
-# connect('novel_api_h5', host="mongodb://%s:%s@%s" % (quote_plus("aiwaves"), quote_plus("bxzn2023"), "47.96.122.196"))
-
 from mongoengine import connect
-# 连接 MongoDB 数据库
-connect('your_database_name')
+from urllib.parse import quote_plus
+
+connect('novel_api_h5', host="mongodb://%s:%s@%s" % (quote_plus("aiwaves"), quote_plus("bxzn2023"), "47.96.122.196"))
+
+# from mongoengine import connect
+# # 连接 MongoDB 数据库
+# connect('your_database_name')
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

@@ -6541,3 +6541,15 @@ INFO 2023-06-20 12:06:21,279 autoreload 250 E:\workspace2\novel_api\novel_api\ap
 INFO 2023-06-20 12:06:22,396 autoreload 636 Watching for file changes with StatReloader
 INFO 2023-06-20 12:09:58,596 autoreload 250 E:\workspace2\novel_api\novel_api\apps\chatbot\views.py changed, reloading.
 INFO 2023-06-20 12:09:59,774 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-20 12:12:40,246 autoreload 250 E:\workspace2\novel_api\novel_api\apps\chatbot\views.py changed, reloading.
+INFO 2023-06-20 12:12:42,023 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-20 12:12:46,472 autoreload 250 E:\workspace2\novel_api\novel_api\apps\chatbot\views.py changed, reloading.
+INFO 2023-06-20 12:12:48,148 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-20 12:14:13,210 autoreload 250 E:\workspace2\novel_api\novel_api\apps\chatbot\views.py changed, reloading.
+INFO 2023-06-20 12:14:14,828 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-20 12:22:42,067 autoreload 250 E:\workspace2\novel_api\novel_api\apps\chatbot\views.py changed, reloading.
+INFO 2023-06-20 12:22:43,664 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-20 12:23:27,680 autoreload 250 E:\workspace2\novel_api\novel_api\apps\chatbot\views.py changed, reloading.
+INFO 2023-06-20 12:23:29,324 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-20 12:26:09,724 autoreload 250 E:\workspace2\novel_api\novel_api\settings\dev.py changed, reloading.
+INFO 2023-06-20 12:26:11,392 autoreload 636 Watching for file changes with StatReloader

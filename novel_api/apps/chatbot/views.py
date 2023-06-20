@@ -7,14 +7,13 @@ from django.http import StreamingHttpResponse
 from utils.common_response import APIResponse
 from .models import Access_token_pool, Paragraph, Choice
 
-# 如下导入和算法相关
+# 如下导入和get_memory算法相关
 from sentence_transformers import SentenceTransformer
 from sentence_transformers import util
 import torch
-
 os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 embedder = SentenceTransformer('multi-qa-mpnet-base-cos-v1')
-# 如上导入和算法相关
+# 如上导入和get_memory算法相关
 
 
 # token_lock = threading.Lock()  # 注释掉这两行代码，就变成了不加锁的版本
@@ -241,5 +240,3 @@ class ChatBotView(ViewSet):
             input_long_term_memory = "暂无参考"
 
         return APIResponse(data=input_long_term_memory)
-
-
