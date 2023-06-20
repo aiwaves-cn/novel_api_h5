@@ -1,3 +1,4 @@
+import os
 from rest_framework.exceptions import APIException
 from rest_framework.viewsets import ViewSet
 from rest_framework.decorators import action
@@ -6,18 +7,28 @@ from django.http import StreamingHttpResponse
 from utils.common_response import APIResponse
 from .models import Access_token_pool, Paragraph, Choice
 
+# 如下导入和算法相关
+from sentence_transformers import SentenceTransformer
+from sentence_transformers import util
+import torch
+
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+embedder = SentenceTransformer('multi-qa-mpnet-base-cos-v1')
+# 如上导入和算法相关
+
+
 # token_lock = threading.Lock()  # 注释掉这两行代码，就变成了不加锁的版本
 
 def concurrent_get_token():
     try:
         # with token_lock:  # 注释掉这两行代码，就变成了不加锁的版本
-            oldest_token = Access_token_pool.get_oldest_token()
-            return oldest_token.access_token
+        oldest_token = Access_token_pool.get_oldest_token()  # 在Access_token_pool新增了类方法
+        return oldest_token.access_token
     except Exception as e:
         raise APIException(f"获取 token 出错:{e}")
 
 
-def get_response_streaming(prompt):
+def get_response_streaming(prompt):  # 返回流式输出
     access_token = concurrent_get_token()
     chatbot = Chatbot(config={
         "access_token": access_token,
@@ -203,8 +214,32 @@ class ChatBotView(ViewSet):
 
     @action(methods=['post'], detail=False)
     def get_memory(self, request, *args, **kwargs):
-        return APIResponse()
+        """
+        get_memory不使用。后续可能添加此接口。
+        经过测试，可以将选项和问题对如下long_memory列表的文本进行匹配，不会随意匹配比如，不会匹配到'你爱我、我爱你、吃汉堡、吃香蕉'等干扰项，而是输出和当前问题、选项最相关的续写。
+        """
+        question = request.data.get('question', '')
+        choice = request.data.get('choice', '')
+        long_memory = [
+            r'"爸爸，请放过我，我真的没有说谎。”我颤抖着声音，努力挣脱张强的控制。我可以感受到他的力量，他的手紧紧抓住我的胳膊，指甲刺进了我的皮肤。\n“你以为我会相信你吗？你这个小骗子！”张强嘶吼着，他的眼神充满了疯狂和恶意。\n我拼命挣扎着，想要逃脱他的束缚，但他的力量太大了，我无法抵挡。\n突然，门外传来了一阵急促的敲门声。张强停下了动作，他警惕地朝门口望去。\n“爸爸，是谁啊？”我问道，心中充满了希望。\n张强没有回答，他紧紧盯着门口，仿佛在思考下一步的行动。\n敲门声越来越急促，似乎是有人在外面迫切地等待着。\n我不知道门外是谁，但这是我逃脱的机会。我用尽全力挣脱了张强的控制，向门口冲去。\n就在我抓住门把手的瞬间，门突然被猛力推开，我重心不稳，摔倒在地上。\n门外站着一个高大的男人，他身穿黑色西装，目光深邃。他看着我，眼中闪过一丝怜悯的神色。\n“你没事吧？”他问道，声音低沉而温和。\n我艰难地站起身，用手抹去脸上的血迹，迷茫地望着这个陌生人。',
+            r'"谢谢你救了我，先生。我不知道该怎么表达我的感激之情。"我颤抖着声音说道，脸上仍带着疼痛和惊恐的神色。\n\n陌生男人微笑着摇了摇头，目光中透露着一丝沉重。“不用感谢，小姑娘。我只是路过这里，看到了你遇到的情况，觉得有必要伸出援手。”他的声音低沉而坚定。\n\n我试图站直身体，勉力维持微笑。“请问，你是谁？为什么会在这里？”\n\n他轻轻摇头，眼神变得凝重。“这些问题以后再说吧，小姑娘。现在，你需要离开这里，找个安全的地方。”\n\n我点点头，表情认真。“好的，我明白。谢谢你的提醒。”我向门口走去，希望能尽快远离这个充满恶意的地方。\n\n突然，一阵刺耳的声音从屋外传来。我回头望去，只见陌生男人面容严肃地看向门口，紧紧握着拳头。\n\n"是谁？"我轻声问道。\n\n他望向我，眼中闪过坚定的光芒。“我来对付他们，你赶紧离开。”他的语气中充满了坚决和保护之意。\n\n我心中涌起一股感激之情，但又有些不舍。“可是……我怎么能把你一个人留在这里？”\n\n他微笑着摇了摇头。“不用担心我，小姑娘。我有能力应对。你只需要想办法离开这里，找到一个安全的地方。”\n\n我犹豫了一下，最终点了点头。“好吧，但你要小心。”我转身向门外逃去，心中升起一股希望，希望这个陌生男人能够保护自己。\n\n然而，在我走出门口的瞬间，一声巨响传来，整个房间陷入了黑暗之中。',
+            '你爱我',
+            '我爱你',
+            '吃汉堡',
+            '吃香蕉',
+        ]
+        if len(long_memory) >= 2:
+            memory_index = embedder.encode(long_memory, convert_to_tensor=True)
+            instruction_embedding = embedder.encode(question + choice, convert_to_tensor=True)
+            memory_scores = util.cos_sim(instruction_embedding, memory_index)[0]  # 所有续写和问题选项的向量算分数
+            top_k_idx = torch.topk(memory_scores, k=2)[1]  # 取相似度最高的2个的索引
+            top_k_memory = [long_memory[idx] for idx in top_k_idx]  # 通过索引取出long_memory
+            input_long_term_memory = '\n'.join(
+                [f"相关段落{i + 1} :" + selected_memory for i, selected_memory in enumerate(top_k_memory)])
+            print(input_long_term_memory)
+        else:
+            input_long_term_memory = "暂无参考"
 
-    @action(methods=['get'], detail=False)
-    def get_uuid(self):
-        return APIResponse()
+        return APIResponse(data=input_long_term_memory)
+
+
