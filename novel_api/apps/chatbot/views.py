@@ -1,6 +1,3 @@
-import uuid
-import time
-
 from rest_framework.exceptions import APIException
 from rest_framework.viewsets import ViewSet
 from rest_framework.decorators import action
@@ -9,43 +6,33 @@ from django.http import StreamingHttpResponse
 from utils.common_response import APIResponse
 from .models import Access_token_pool, Paragraph, Choice
 
+# token_lock = threading.Lock()  # 注释掉这两行代码，就变成了不加锁的版本
 
-class User(object):
-
-    def __init__(self):
-        self.user_id = str(uuid.uuid4())
+def concurrent_get_token():
+    try:
+        # with token_lock:  # 注释掉这两行代码，就变成了不加锁的版本
+            oldest_token = Access_token_pool.get_oldest_token()
+            return oldest_token.access_token
+    except Exception as e:
+        raise APIException(f"获取 token 出错:{e}")
 
 
 def get_response_streaming(prompt):
-    """
-    Args:
-        prompt:提示词
-        access_token
-
-    Returns:流式
-    """
-    acp_obj = Access_token_pool.objects[0]
-    access_token = acp_obj.access_token
+    access_token = concurrent_get_token()
     chatbot = Chatbot(config={
         "access_token": access_token,
         "collect_analytics": True,
-        # 服务器挂代理
         "proxy": "socks5h://127.0.0.1:1090"
     })
     try:
         result = chatbot.ask(prompt)
     except Exception as e:
-        acp_obj.delete()
-        raise APIException('chatgpt报错')
-    acp_obj.delete()
-    Access_token_pool(access_token=access_token, now_time=str(time.time())).save()
-    # 存回来
+        raise APIException("chatgpt报错:", str(e))
     return result
 
 
 def get_response(prompt):  # 这个是仅仅只有总结接口使用 不会返回流式输出
-    acp_obj = Access_token_pool.objects[0]
-    access_token = acp_obj.access_token
+    access_token = concurrent_get_token()
     chatbot = Chatbot(config={
         "access_token": access_token,
         "collect_analytics": True,
@@ -57,10 +44,7 @@ def get_response(prompt):  # 这个是仅仅只有总结接口使用 不会返�
             message = data["message"][len(prev_text):]
             prev_text = data["message"]
     except Exception as e:
-        acp_obj.delete()
-        raise APIException('chatgpt报错')
-    acp_obj.delete()
-    Access_token_pool(access_token=access_token, now_time=str(time.time())).save()
+        raise APIException("chatgpt报错:", str(e))
     return prev_text
 
 
@@ -79,9 +63,7 @@ class ChatBotView(ViewSet):
             'long_memory': '',
             "index": request.data.get('index', '')
         }
-
         del pre_data["index"]
-
         prompt = lambda background, relationship, character, summary, content, question, choice, long_memory: f"""
         现在你是一个经验丰富的写对话小说的网文作家，你需要续写这本小说，小说的大部分内容都是对话，注意你续写的只是小说的开头部分，发展要缓慢，续写应该停在突然的地方，比如话说到一半，人物动作做到一半
         续写指的是接着小说的末尾创作出新的内容，创作出的新内容与小说之前的内容不矛盾，输出时不用将小说之前内容输出！！！

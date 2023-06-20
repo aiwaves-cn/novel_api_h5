@@ -1,4 +1,5 @@
 import mongoengine
+import datetime
 
 
 class Memory(mongoengine.Document):
@@ -8,7 +9,16 @@ class Memory(mongoengine.Document):
 
 class Access_token_pool(mongoengine.Document):
     access_token = mongoengine.StringField()
-    now_time = mongoengine.StringField()
+    now_time = mongoengine.DateTimeField()
+
+    @classmethod
+    def get_oldest_token(cls):
+        current_time = datetime.datetime.now()
+        oldest_token = cls.objects.order_by('now_time').first()  # 未取到不会报错
+        if oldest_token:
+            oldest_token.now_time = current_time
+            oldest_token.save()
+            return oldest_token  # 如果不存在会为None
 
 
 class User(mongoengine.Document):
@@ -21,10 +31,6 @@ class Paragraph(mongoengine.Document):
 
 class Choice(mongoengine.Document):
     text = mongoengine.ListField()
-
-
-
-
 
 # "novel_id": 1,
 # "novel_title": "我对总裁大人有偏见",

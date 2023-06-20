@@ -89,10 +89,14 @@ DATABASES = {
 }
 
 # mongodb配置
-from mongoengine import connect
-from urllib.parse import quote_plus
+# from mongoengine import connect
+# from urllib.parse import quote_plus
+#
+# connect('novel_api_h5', host="mongodb://%s:%s@%s" % (quote_plus("aiwaves"), quote_plus("bxzn2023"), "47.96.122.196"))
 
-connect('novel_api_h5', host="mongodb://%s:%s@%s" % (quote_plus("aiwaves"), quote_plus("bxzn2023"), "47.96.122.196"))
+from mongoengine import connect
+# 连接 MongoDB 数据库
+connect('your_database_name')
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

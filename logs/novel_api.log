@@ -6420,3 +6420,118 @@ INFO 2023-06-19 18:47:41,460 autoreload 636 Watching for file changes with StatR
 INFO 2023-06-19 18:49:42,637 autoreload 250 E:\workspace2\novel_api\novel_api\apps\chatbot\views.py changed, reloading.
 INFO 2023-06-19 18:49:43,883 autoreload 636 Watching for file changes with StatReloader
 INFO 2023-06-19 18:54:49,730 basehttp 161 "GET /api/v1/novel/ HTTP/1.1" 200 1630
+INFO 2023-06-19 18:54:52,176 basehttp 161 "GET /api/v1/novel/3/ HTTP/1.1" 200 4585
+INFO 2023-06-19 19:01:03,951 autoreload 250 E:\workspace2\novel_api\novel_api\apps\chatbot\views.py changed, reloading.
+INFO 2023-06-19 19:01:05,197 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 19:01:53,346 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 20:19:11,360 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-19 20:22:33,402 autoreload 250 E:\workspace2\novel_api\novel_api\apps\chatbot\models.py changed, reloading.
+INFO 2023-06-19 20:22:34,776 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-20 09:49:08,375 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-20 09:49:12,969 basehttp 161 "GET /api/v1/novel/ HTTP/1.1" 200 1630
+INFO 2023-06-20 09:49:20,652 basehttp 161 "GET /api/v1/novel/ HTTP/1.1" 200 1630
+INFO 2023-06-20 09:49:24,123 basehttp 161 "GET /api/v1/novel/3/ HTTP/1.1" 200 4585
+INFO 2023-06-20 09:49:34,349 basehttp 161 "GET /api/v1/novel/2/ HTTP/1.1" 200 7304
+INFO 2023-06-20 11:06:30,018 autoreload 250 E:\workspace2\novel_api\novel_api\apps\chatbot\models.py changed, reloading.
+INFO 2023-06-20 11:06:31,428 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-20 11:08:08,382 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-20 11:11:36,311 autoreload 250 E:\workspace2\novel_api\novel_api\apps\chatbot\views.py changed, reloading.
+INFO 2023-06-20 11:11:37,420 autoreload 636 Watching for file changes with StatReloader
+ERROR 2023-06-20 11:12:26,013 common_exceptions 16 用户：【匿名用户】，使用：【POST】 请求，请求：【/api/v1/chatbot/get_content/】 地址，视图函数是：【<apps.chatbot.views.ChatBotView object at 0x000002150CB034F0>】，报错了，错误是：【ChatBotView.get_content.<locals>.<lambda>() got an unexpected keyword argument 'index'】
+INFO 2023-06-20 11:12:26,014 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 200 107
+INFO 2023-06-20 11:13:18,757 autoreload 250 E:\workspace2\novel_api\novel_api\apps\chatbot\views.py changed, reloading.
+INFO 2023-06-20 11:13:20,116 autoreload 636 Watching for file changes with StatReloader
+ERROR 2023-06-20 11:13:21,461 common_exceptions 16 用户：【匿名用户】，使用：【POST】 请求，请求：【/api/v1/chatbot/get_content/】 地址，视图函数是：【<apps.chatbot.views.ChatBotView object at 0x00000195C518B520>】，报错了，错误是：【获取 token 出错:】
+INFO 2023-06-20 11:13:21,461 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 200 41
+INFO 2023-06-20 11:14:14,111 autoreload 250 E:\workspace2\novel_api\novel_api\apps\chatbot\models.py changed, reloading.
+INFO 2023-06-20 11:14:15,483 autoreload 636 Watching for file changes with StatReloader
+ERROR 2023-06-20 11:14:17,302 common_exceptions 16 用户：【匿名用户】，使用：【POST】 请求，请求：【/api/v1/chatbot/get_content/】 地址，视图函数是：【<apps.chatbot.views.ChatBotView object at 0x000001B42E567460>】，报错了，错误是：【获取 token 出错:】
+INFO 2023-06-20 11:14:17,303 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 200 41
+INFO 2023-06-20 11:14:53,051 autoreload 250 E:\workspace2\novel_api\novel_api\apps\chatbot\views.py changed, reloading.
+INFO 2023-06-20 11:14:54,492 autoreload 636 Watching for file changes with StatReloader
+ERROR 2023-06-20 11:14:55,601 common_exceptions 16 用户：【匿名用户】，使用：【POST】 请求，请求：【/api/v1/chatbot/get_content/】 地址，视图函数是：【<apps.chatbot.views.ChatBotView object at 0x0000021BAE0BB340>】，报错了，错误是：【获取 token 出错:The fields "{'now_time'}" do not exist on the document "Access_token_pool"】
+INFO 2023-06-20 11:14:55,602 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 200 119
+INFO 2023-06-20 11:15:52,482 autoreload 250 E:\workspace2\novel_api\novel_api\apps\chatbot\models.py changed, reloading.
+INFO 2023-06-20 11:15:53,676 autoreload 636 Watching for file changes with StatReloader
+ERROR 2023-06-20 11:15:54,013 common_exceptions 16 用户：【匿名用户】，使用：【POST】 请求，请求：【/api/v1/chatbot/get_content/】 地址，视图函数是：【<apps.chatbot.views.ChatBotView object at 0x0000011ED0FF2B00>】，报错了，错误是：【获取 token 出错:'str' object has no attribute 'access_token'】
+INFO 2023-06-20 11:15:54,014 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 200 85
+INFO 2023-06-20 11:16:35,201 autoreload 250 E:\workspace2\novel_api\novel_api\apps\chatbot\models.py changed, reloading.
+ERROR 2023-06-20 11:16:35,483 common_exceptions 16 用户：【匿名用户】，使用：【POST】 请求，请求：【/api/v1/chatbot/get_content/】 地址，视图函数是：【<apps.chatbot.views.ChatBotView object at 0x0000011ECDDC0280>】，报错了，错误是：【获取 token 出错:'str' object has no attribute 'access_token'】
+INFO 2023-06-20 11:16:35,483 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 200 85
+INFO 2023-06-20 11:16:38,454 autoreload 636 Watching for file changes with StatReloader
+ERROR 2023-06-20 11:16:39,859 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 500 59
+INFO 2023-06-20 11:17:39,520 autoreload 250 E:\workspace2\novel_api\novel_api\apps\chatbot\models.py changed, reloading.
+INFO 2023-06-20 11:17:40,770 autoreload 636 Watching for file changes with StatReloader
+ERROR 2023-06-20 11:17:41,417 common_exceptions 16 用户：【匿名用户】，使用：【POST】 请求，请求：【/api/v1/chatbot/get_content/】 地址，视图函数是：【<apps.chatbot.views.ChatBotView object at 0x000001AD1E9AB2B0>】，报错了，错误是：【获取 token 出错:'str' object has no attribute 'access_token'】
+INFO 2023-06-20 11:17:41,418 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 200 85
+ERROR 2023-06-20 11:17:43,743 common_exceptions 16 用户：【匿名用户】，使用：【POST】 请求，请求：【/api/v1/chatbot/get_content/】 地址，视图函数是：【<apps.chatbot.views.ChatBotView object at 0x000001AD1EB9F7C0>】，报错了，错误是：【获取 token 出错:'str' object has no attribute 'access_token'】
+INFO 2023-06-20 11:17:43,743 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 200 85
+INFO 2023-06-20 11:17:50,462 autoreload 250 E:\workspace2\novel_api\novel_api\apps\chatbot\models.py changed, reloading.
+ERROR 2023-06-20 11:17:50,502 common_exceptions 16 用户：【匿名用户】，使用：【POST】 请求，请求：【/api/v1/chatbot/get_content/】 地址，视图函数是：【<apps.chatbot.views.ChatBotView object at 0x000001AD1E00D810>】，报错了，错误是：【获取 token 出错:'str' object has no attribute 'access_token'】
+INFO 2023-06-20 11:17:50,503 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 200 85
+ERROR 2023-06-20 11:17:51,103 common_exceptions 16 用户：【匿名用户】，使用：【POST】 请求，请求：【/api/v1/chatbot/get_content/】 地址，视图函数是：【<apps.chatbot.views.ChatBotView object at 0x000001AD1E7DC190>】，报错了，错误是：【获取 token 出错:'str' object has no attribute 'access_token'】
+INFO 2023-06-20 11:17:51,104 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 200 85
+ERROR 2023-06-20 11:17:51,854 common_exceptions 16 用户：【匿名用户】，使用：【POST】 请求，请求：【/api/v1/chatbot/get_content/】 地址，视图函数是：【<apps.chatbot.views.ChatBotView object at 0x000001AD1E7DD0F0>】，报错了，错误是：【获取 token 出错:'str' object has no attribute 'access_token'】
+INFO 2023-06-20 11:17:51,855 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 200 85
+ERROR 2023-06-20 11:17:52,635 common_exceptions 16 用户：【匿名用户】，使用：【POST】 请求，请求：【/api/v1/chatbot/get_content/】 地址，视图函数是：【<apps.chatbot.views.ChatBotView object at 0x000001AD1E7DF7F0>】，报错了，错误是：【获取 token 出错:'str' object has no attribute 'access_token'】
+INFO 2023-06-20 11:17:52,636 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 200 85
+INFO 2023-06-20 11:17:54,401 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-20 11:17:59,122 autoreload 636 Watching for file changes with StatReloader
+ERROR 2023-06-20 11:18:01,741 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 500 59
+ERROR 2023-06-20 11:18:35,707 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 500 59
+ERROR 2023-06-20 11:19:24,737 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 500 59
+ERROR 2023-06-20 11:21:48,537 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 500 59
+INFO 2023-06-20 11:21:55,044 autoreload 636 Watching for file changes with StatReloader
+ERROR 2023-06-20 11:21:57,768 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 500 59
+ERROR 2023-06-20 11:23:37,154 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 500 59
+ERROR 2023-06-20 11:23:39,331 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 500 59
+INFO 2023-06-20 11:23:45,345 autoreload 636 Watching for file changes with StatReloader
+ERROR 2023-06-20 11:23:48,523 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 500 59
+ERROR 2023-06-20 11:24:50,606 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 500 59
+INFO 2023-06-20 11:24:58,297 autoreload 636 Watching for file changes with StatReloader
+ERROR 2023-06-20 11:25:03,020 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 500 59
+INFO 2023-06-20 11:32:51,112 autoreload 250 E:\workspace2\novel_api\novel_api\apps\chatbot\views.py changed, reloading.
+INFO 2023-06-20 11:32:53,139 autoreload 636 Watching for file changes with StatReloader
+ERROR 2023-06-20 11:32:56,016 common_exceptions 16 用户：【匿名用户】，使用：【POST】 请求，请求：【/api/v1/chatbot/get_content/】 地址，视图函数是：【<apps.chatbot.views.ChatBotView object at 0x000002032A54B190>】，报错了，错误是：【'NoneType' object is not iterable】
+INFO 2023-06-20 11:32:56,016 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 200 54
+INFO 2023-06-20 11:33:47,142 autoreload 250 E:\workspace2\novel_api\novel_api\apps\chatbot\views.py changed, reloading.
+INFO 2023-06-20 11:33:48,506 autoreload 636 Watching for file changes with StatReloader
+ERROR 2023-06-20 11:33:48,765 common_exceptions 16 用户：【匿名用户】，使用：【POST】 请求，请求：【/api/v1/chatbot/get_content/】 地址，视图函数是：【<apps.chatbot.views.ChatBotView object at 0x000002014BCADAE0>】，报错了，错误是：【'NoneType' object is not iterable】
+INFO 2023-06-20 11:33:48,766 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 200 54
+ERROR 2023-06-20 11:33:49,613 common_exceptions 16 用户：【匿名用户】，使用：【POST】 请求，请求：【/api/v1/chatbot/get_content/】 地址，视图函数是：【<apps.chatbot.views.ChatBotView object at 0x000002014BD4B9A0>】，报错了，错误是：【'NoneType' object is not iterable】
+INFO 2023-06-20 11:33:49,614 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 200 54
+ERROR 2023-06-20 11:33:50,223 common_exceptions 16 用户：【匿名用户】，使用：【POST】 请求，请求：【/api/v1/chatbot/get_content/】 地址，视图函数是：【<apps.chatbot.views.ChatBotView object at 0x000002014BF3B1F0>】，报错了，错误是：【'NoneType' object is not iterable】
+INFO 2023-06-20 11:33:50,223 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 200 54
+ERROR 2023-06-20 11:33:50,764 common_exceptions 16 用户：【匿名用户】，使用：【POST】 请求，请求：【/api/v1/chatbot/get_content/】 地址，视图函数是：【<apps.chatbot.views.ChatBotView object at 0x000002014BF3B6D0>】，报错了，错误是：【'NoneType' object is not iterable】
+INFO 2023-06-20 11:33:50,764 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 200 54
+ERROR 2023-06-20 11:33:54,090 common_exceptions 16 用户：【匿名用户】，使用：【POST】 请求，请求：【/api/v1/chatbot/get_content/】 地址，视图函数是：【<apps.chatbot.views.ChatBotView object at 0x000002014BF3BCD0>】，报错了，错误是：【'NoneType' object is not iterable】
+INFO 2023-06-20 11:33:54,091 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 200 54
+INFO 2023-06-20 11:34:09,513 autoreload 250 E:\workspace2\novel_api\novel_api\apps\chatbot\views.py changed, reloading.
+INFO 2023-06-20 11:34:10,836 autoreload 636 Watching for file changes with StatReloader
+ERROR 2023-06-20 11:34:12,650 common_exceptions 16 用户：【匿名用户】，使用：【POST】 请求，请求：【/api/v1/chatbot/get_content/】 地址，视图函数是：【<apps.chatbot.views.ChatBotView object at 0x0000024493AC6AA0>】，报错了，错误是：【'NoneType' object is not iterable】
+INFO 2023-06-20 11:34:12,651 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 200 54
+INFO 2023-06-20 11:34:23,705 autoreload 250 E:\workspace2\novel_api\novel_api\apps\chatbot\views.py changed, reloading.
+INFO 2023-06-20 11:34:24,977 autoreload 636 Watching for file changes with StatReloader
+ERROR 2023-06-20 11:34:25,928 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 500 59
+INFO 2023-06-20 11:34:42,966 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-20 11:34:58,512 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 200 387630
+INFO 2023-06-20 11:35:58,348 basehttp 161 "POST /api/v1/chatbot/get_summary/ HTTP/1.1" 200 643
+ERROR 2023-06-20 11:36:08,543 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 500 59
+INFO 2023-06-20 11:36:10,237 basehttp 161 "POST /api/v1/chatbot/get_question_and_option/ HTTP/1.1" 200 44071
+INFO 2023-06-20 11:38:47,058 autoreload 250 E:\workspace2\novel_api\novel_api\apps\chatbot\views.py changed, reloading.
+INFO 2023-06-20 11:38:48,371 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-20 11:38:52,697 autoreload 250 E:\workspace2\novel_api\novel_api\apps\chatbot\views.py changed, reloading.
+INFO 2023-06-20 11:38:53,714 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-06-20 11:41:45,987 autoreload 636 Watching for file changes with StatReloader
+ERROR 2023-06-20 11:41:53,151 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 500 59
+INFO 2023-06-20 11:41:53,167 basehttp 161 "POST /api/v1/chatbot/get_question_and_option/ HTTP/1.1" 200 48310
+INFO 2023-06-20 11:43:10,862 autoreload 250 E:\workspace2\novel_api\novel_api\apps\chatbot\views.py changed, reloading.
+INFO 2023-06-20 11:43:12,219 autoreload 636 Watching for file changes with StatReloader
+ERROR 2023-06-20 11:43:14,014 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 500 59
+INFO 2023-06-20 11:43:24,455 autoreload 636 Watching for file changes with StatReloader
+ERROR 2023-06-20 11:43:27,566 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 500 59
+INFO 2023-06-20 11:44:23,529 basehttp 161 "POST /api/v1/chatbot/get_content/ HTTP/1.1" 200 471072
+INFO 2023-06-20 11:44:52,225 basehttp 161 "POST /api/v1/chatbot/get_summary/ HTTP/1.1" 200 697
+INFO 2023-06-20 11:45:03,241 basehttp 161 "POST /api/v1/chatbot/get_question_and_option/ HTTP/1.1" 200 45250
+INFO 2023-06-20 11:46:11,742 autoreload 250 E:\workspace2\novel_api\novel_api\apps\chatbot\views.py changed, reloading.
+INFO 2023-06-20 11:46:13,003 autoreload 636 Watching for file changes with StatReloader
